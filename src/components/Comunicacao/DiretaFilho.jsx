@@ -3,9 +3,9 @@ import React from 'react'
 export default function DiretaFilho(props) {
   return (
     <div>
-        <div>{props.texto}</div>
-        <div>{props.numero}</div>
-        <div>{props.bool ? 'Verdadeiro' : 'Falso'}</div>
+        <div>{props.nome}</div>
+        <div>{props.idade}</div>
+        <div>{props.nerd ? 'Verdadeiro' : 'Falso'}</div>
     </div>
   )
 }

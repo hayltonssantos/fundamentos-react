@@ -11,6 +11,11 @@ import ListaAlunos from "./components/Repetição/ListaAlunos";
 import ListaProdutos from "./components/Repetição/ListaProdutos";
 import ParOuImpar from "./components/Condicional/ParOuImpar";
 import UsuarioInfo from "./components/Condicional/UsuarioInfo";
+import DiretaPai from "./components/Comunicacao/DiretaPai";
+import IndiretaPai from "./components/Comunicacao/IndiretaPai";
+import Input from "./components/Formulario/Input";
+import ContadorClass from "./components/ContadorClass/Contador";
+import ContadorFunction from "./components/ContadorFunction/Contador";
 const tag = <strong>Ola React</strong>
 
 export default (props) =>{
@@ -20,7 +25,25 @@ export default (props) =>{
 
         <div className="Cards">
 
-            
+            <Cards titulo="012 - ContadorFunction" color="#44a987">
+                <ContadorFunction numeroInicial={10}></ContadorFunction>
+            </Cards>
+
+            <Cards titulo="012 - Contador" color="#44a987">
+                <ContadorClass numeroInicial={10}></ContadorClass>
+            </Cards>
+
+            <Cards titulo="011 - Componente controlado" color="#44a987">
+                <Input></Input>
+            </Cards>
+
+            <Cards titulo="010 - Comunicacao Indireta" color="#444987">
+                <IndiretaPai></IndiretaPai>
+            </Cards>
+
+            <Cards titulo="009 - Comunicacao direta" color="#789541">
+                <DiretaPai></DiretaPai>
+            </Cards>
 
             <Cards titulo="008 - Par ou impar" color="#663">
                 <ParOuImpar numero1={23} numero2={560}/>

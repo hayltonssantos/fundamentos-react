@@ -4,7 +4,9 @@ import DiretaFilho from './DiretaFilho'
 export default function DiretaPai(props) {
   return (
     <div>
-        <DiretaFilho texto={'Filho 1'} numero={20} bool={true}/>
+        <DiretaFilho nome={'Junin'} idade={20} nerd={true}/>
+        <p></p>
+        <DiretaFilho nome={'PaulaD'} idade={20} nerd={true}/>
     </div>
   )
 }
