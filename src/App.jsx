@@ -16,6 +16,7 @@ import IndiretaPai from "./components/Comunicacao/IndiretaPai";
 import Input from "./components/Formulario/Input";
 import ContadorClass from "./components/ContadorClass/Contador";
 import ContadorFunction from "./components/ContadorFunction/Contador";
+import Mega from "./components/Mega/Mega";
 const tag = <strong>Ola React</strong>
 
 export default (props) =>{
@@ -24,6 +25,10 @@ export default (props) =>{
         <h1>Fundamentos React</h1>
 
         <div className="Cards">
+            
+            <Cards titulo="013 - ContadorFunction" color="#0f022f3f">
+               <Mega></Mega>
+            </Cards>
 
             <Cards titulo="012 - ContadorFunction" color="#44a987">
                 <ContadorFunction numeroInicial={10}></ContadorFunction>
