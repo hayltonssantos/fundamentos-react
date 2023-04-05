@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './Mega.css'
 
 export default function Mega(props) {
 
@@ -19,14 +20,29 @@ export default function Mega(props) {
     
     }
     
-    console.log(gerarNumeros(7))
-    const numerosIniciais = Array(props.qnt || 6).fill(0)
+    console.log(gerarNumeros(7)) 
+    const [qtd, setQtd] = useState(props.qtd || 6)
+    const numerosIniciais = gerarNumeros(qtd)
     const [numeros, setNumeros] = useState(numerosIniciais)
   return (
-    <div>
+    <div className='Mega'>
         <h2>Mega</h2>
         <h3>{numeros.join(' ')}</h3>
-        <button onClick={setNumeros}>Gerar Numeros</button>
+        <div>
+            <label>Quantidade de numeros:</label>
+            <input type='number' 
+                    min={6}
+                    max={15}
+                    value={qtd}
+                    onChange={e => {
+                        setQtd(+e.target.value)
+                        setNumeros(gerarNumeros(qtd))   
+                        }}    
+            ></input>
+        </div>
+        <button onClick={_ => setNumeros(gerarNumeros(qtd))}>
+            Gerar Numeros
+        </button>
     </div>
   )
 }

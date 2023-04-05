@@ -27,7 +27,7 @@ export default (props) =>{
         <div className="Cards">
             
             <Cards titulo="013 - ContadorFunction" color="#0f022f3f">
-               <Mega></Mega>
+               <Mega qtd={8}></Mega>
             </Cards>
 
             <Cards titulo="012 - ContadorFunction" color="#44a987">
